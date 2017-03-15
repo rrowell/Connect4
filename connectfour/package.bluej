@@ -6,19 +6,65 @@ package.editor.width=560
 package.editor.x=30
 package.editor.y=30
 package.numDependencies=0
+<<<<<<< HEAD
 package.numTargets=1
+=======
+package.numTargets=5
+>>>>>>> origin/Solution
 package.showExtends=true
 package.showUses=true
 project.charset=UTF-8
-target1.editor.height=700
-target1.editor.width=900
-target1.editor.x=70
-target1.editor.y=50
 target1.height=50
+<<<<<<< HEAD
 target1.name=Board
+=======
+target1.name=player1
+>>>>>>> origin/Solution
 target1.showInterface=false
 target1.type=ClassTarget
 target1.typeParameters=
 target1.width=80
+<<<<<<< HEAD
 target1.x=70
 target1.y=70
+=======
+target1.x=190
+target1.y=70
+target2.editor.height=700
+target2.editor.width=900
+target2.editor.x=70
+target2.editor.y=50
+target2.height=50
+target2.name=DeleteMe
+target2.naviview.expanded=true
+target2.showInterface=false
+target2.type=ClassTarget
+target2.typeParameters=
+target2.width=80
+target2.x=70
+target2.y=10
+target3.height=50
+target3.name=player2
+target3.showInterface=false
+target3.type=ClassTarget
+target3.typeParameters=
+target3.width=80
+target3.x=10
+target3.y=130
+target4.height=50
+target4.name=Card
+target4.showInterface=false
+target4.type=ClassTarget
+target4.typeParameters=
+target4.width=80
+target4.x=160
+target4.y=10
+target5.height=50
+target5.name=connect4Driver
+target5.showInterface=false
+target5.type=ClassTarget
+target5.typeParameters=
+target5.width=110
+target5.x=70
+target5.y=70
+>>>>>>> origin/Solution
