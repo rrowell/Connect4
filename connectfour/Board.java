@@ -14,14 +14,14 @@ public class Board
     public void startgame(){
         for (int row = 0; row < board.length; row++){
             for (int col = 0; col < 7; col++){
-                board[row][col] = null;
+                board[row][col] = " ";
             }
         }
     }
     public boolean check(){
         for (int row = 0; row<board.length; row++){
             for (int col = 0; col < 7; col++){
-                if(checkDown(row, col)|| checkRight(row, col)|| checkLeft(row, col) || checkRD(row, col)||checkLD(row, col)){
+                if(checkDown(row, col)|| checkRight(row, col)|| checkRD(row, col)||checkLD(row, col)){
                     return true;
                 }
             }
@@ -29,18 +29,47 @@ public class Board
         return false;
     }
     public boolean checkDown(int row, int col){
-        return false;
+        if (row > 3 || board[row][col].equals(" ")){
+            return false;
+       }
+       else if (board[row][col].equals(board[row+1][col])&&board[row][col].equals(board[row+2][col]) &&board[row][col].equals(board[row+3][col])){
+           return true;
+        }
+      else{
+           return false;
+        }
     }
     public boolean checkRight(int row, int col){
-        return false;
-    }
-    public boolean checkLeft(int row, int col){
-        return false;
+        if (col > 4 || board[row][col].equals(" ")){
+            return false;
+       }
+       else if (board[row][col].equals(board[row][col+1])&&board[row][col].equals(board[row][col+2])&&board[row][col].equals(board[row][col+3])){
+           return true;
+        }
+      else{
+           return false;
+        }
     }
     public boolean checkRD(int row, int col){
-        return false;
+          if (col > 4 && row  >3 || board[row][col].equals(" ")){
+            return false;
+       }
+       else if (board[row][col].equals(board[row+1][col+1])&&board[row][col].equals(board[row+2][col+2])&&board[row][col].equals(board[row+3][col+3])){
+           return true;
+        }
+      else{
+           return false;
+        }
     }
     public boolean checkLD(int row, int col){
-        return false;
+            if (col < 3 && row  >3 || board[row][col].equals(" ")){
+            return false;
+       }
+       else if (board[row][col].equals(board[row+1][col-1])&&board[row][col].equals(board[row+2][col-2])&&board[row][col].equals(board[row+3][col-3])){
+           return true;
+        }
+      else{
+           return false;
+        }
     }
 }
