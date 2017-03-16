@@ -18,4 +18,29 @@ public class Board
             }
         }
     }
+    public boolean check(){
+        for (int row = 0; row<board.length; row++){
+            for (int col = 0; col < 7; col++){
+                if(checkDown(row, col)|| checkRight(row, col)|| checkLeft(row, col) || checkRD(row, col)||checkLD(row, col)){
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+    public boolean checkDown(int row, int col){
+        return false;
+    }
+    public boolean checkRight(int row, int col){
+        return false;
+    }
+    public boolean checkLeft(int row, int col){
+        return false;
+    }
+    public boolean checkRD(int row, int col){
+        return false;
+    }
+    public boolean checkLD(int row, int col){
+        return false;
+    }
 }
