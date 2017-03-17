@@ -19,6 +19,9 @@ public class Board
         }
     }
     public boolean check(){
+        /**
+         * 
+         */
         for (int row = 0; row<board.length; row++){
             for (int col = 0; col < 7; col++){
                 if(checkDown(row, col)|| checkRight(row, col)|| checkRD(row, col)||checkLD(row, col)){
@@ -71,5 +74,8 @@ public class Board
       else{
            return false;
         }
+    }
+    public boolean drop(int pos){
+        if (pos
     }
 }
