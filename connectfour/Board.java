@@ -20,13 +20,7 @@ public class Board
         }
     }
     public boolean check(){
-<<<<<<< HEAD
-        /**
-         * 
-         */
-=======
-        //checks for winner
->>>>>>> origin/Solution
+
         for (int row = 0; row<board.length; row++){
             for (int col = 0; col < 7; col++){
                 if(checkDown(row, col)|| checkRight(row, col)|| checkRD(row, col)||checkLD(row, col)){
@@ -84,15 +78,20 @@ public class Board
            return false;
         }
     }
-<<<<<<< HEAD
-    public boolean drop(int pos){
-        if (pos
-=======
-    public boolean drop(int col){
-        if (board[7][col-1].equals(" ")){
-            return false;
+
+    public boolean drop(int col, String car){
+        int space = 0;
+        while(board[space][col-1].equals(" ")){
+            space++;
         }
-        return true;
->>>>>>> origin/Solution
+        
+        if (space > 0){
+            space--;
+            board[space][col-1] = car;
+            return true;
+        }
+        else{
+            return false;
     }
+}
 }
