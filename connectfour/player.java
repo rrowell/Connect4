@@ -1,4 +1,4 @@
-
+import java.util.Random;
 /**
  * Write a description of class player here.
  *  
@@ -8,9 +8,10 @@
 public class player
 {
     // instance variables - replace the example below with your own
-    import java.util.Random;
+    
     public String symbol;
      public boolean AI;
+     public int n ;
      
     public player(String sym, boolean yayornay) {
         symbol = sym;
@@ -22,13 +23,12 @@ public class player
         if(AI = true){
         Random rand = new Random();
         int n = rand.nextInt(7) + 1;
-        if(nextAvailable(n) = 0){
-            Random rand = new Random();
-            int n = rand.nextInt(7) + 1;
-        }
+       
         
-        board[nextAvailable(n)][n];
+        
            
         
     }
+    return n;
+}
 }

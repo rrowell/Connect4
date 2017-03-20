@@ -1,4 +1,6 @@
 #BlueJ class context
-comment0.params=sym
-comment0.target=player(int)
-numComments=1
+comment0.params=sym\ yayornay
+comment0.target=player(java.lang.String,\ boolean)
+comment1.params=
+comment1.target=int\ dropAI()
+numComments=2
