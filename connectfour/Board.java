@@ -12,6 +12,7 @@ public class Board
     public Board(){
     }
     public void startgame(){
+        //creates blank board
         for (int row = 0; row < board.length; row++){
             for (int col = 0; col < 7; col++){
                 board[row][col] = " ";
@@ -19,9 +20,13 @@ public class Board
         }
     }
     public boolean check(){
+<<<<<<< HEAD
         /**
          * 
          */
+=======
+        //checks for winner
+>>>>>>> origin/Solution
         for (int row = 0; row<board.length; row++){
             for (int col = 0; col < 7; col++){
                 if(checkDown(row, col)|| checkRight(row, col)|| checkRD(row, col)||checkLD(row, col)){
@@ -32,6 +37,7 @@ public class Board
         return false;
     }
     public boolean checkDown(int row, int col){
+        //checks for a win down if conditions apply
         if (row > 3 || board[row][col].equals(" ")){
             return false;
        }
@@ -43,6 +49,7 @@ public class Board
         }
     }
     public boolean checkRight(int row, int col){
+        //check for a win right if the conditions apply
         if (col > 4 || board[row][col].equals(" ")){
             return false;
        }
@@ -54,6 +61,7 @@ public class Board
         }
     }
     public boolean checkRD(int row, int col){
+        //checks for a win right diagonal if conditions apply
           if (col > 4 && row  >3 || board[row][col].equals(" ")){
             return false;
        }
@@ -65,6 +73,7 @@ public class Board
         }
     }
     public boolean checkLD(int row, int col){
+        //checks for a win left diagonal if conditions apply
             if (col < 3 && row  >3 || board[row][col].equals(" ")){
             return false;
        }
@@ -75,7 +84,15 @@ public class Board
            return false;
         }
     }
+<<<<<<< HEAD
     public boolean drop(int pos){
         if (pos
+=======
+    public boolean drop(int col){
+        if (board[7][col-1].equals(" ")){
+            return false;
+        }
+        return true;
+>>>>>>> origin/Solution
     }
 }
