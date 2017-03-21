@@ -23,12 +23,7 @@ public class player
         if(AI = true){
         Random rand = new Random();
         int n = rand.nextInt(7) + 1;
-       
-        
-        
-           
-        
+        return n;
     }
-    return n;
-}
+    }
 }
