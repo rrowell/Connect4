@@ -94,5 +94,13 @@ public class Board
             return false;
         }
     }
-    
+    public void printer(){
+        
+        for (int row = 0; row < board.length; row++){
+            for (int col = 0; col<7; col++){
+                System.out.print(board[row][col] + "\t ");
+            }
+            System.out.println("");
+        }
+    }
 }

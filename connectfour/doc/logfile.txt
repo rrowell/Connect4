@@ -1,0 +1,35 @@
+Class documentation
+<---- javadoc command: ---->
+C:\Program Files (x86)\BlueJ\jdk\bin\javadoc.exe
+-author
+-version
+-nodeprecated
+-package
+-noindex
+-notree
+-nohelp
+-nonavbar
+-source
+1.8
+-classpath
+C:\Program Files (x86)\BlueJ\lib\bluejcore.jar;C:\Program Files (x86)\BlueJ\lib\junit-4.8.2.jar;C:\Program Files (x86)\BlueJ\lib\userlib\pi4j-core.jar;C:\Program Files (x86)\BlueJ\lib\userlib\pi4j-device.jar;C:\Program Files (x86)\BlueJ\lib\userlib\pi4j-gpio-extension.jar;C:\Program Files (x86)\BlueJ\lib\userlib\pi4j-service.jar;H:\Connect4\Connect4\connectfour
+-d
+H:\Connect4\Connect4\connectfour\doc
+-encoding
+UTF-8
+-charset
+UTF-8
+-docletpath
+C:\Program Files (x86)\BlueJ\lib\bjdoclet.jar
+-doclet
+bluej.doclet.doclets.formats.html.HtmlDoclet
+H:\Connect4\Connect4\connectfour\Board.java
+<---- end of javadoc command ---->
+Loading source file H:\Connect4\Connect4\connectfour\Board.java...
+H:\Connect4\Connect4\connectfour\Board.java:101: error: not a statement
+                arraystring + board[row][col] + "\t ";
+                                              ^
+H:\Connect4\Connect4\connectfour\Board.java:103: error: not a statement
+            arraystring + "/n";
+                        ^
+2 errors

@@ -22,8 +22,9 @@ public class player
     public int dropAI() {
         if(AI = true){
         Random rand = new Random();
-        int n = rand.nextInt(7) + 1;
-        return n;
-    }
+        n = rand.nextInt(7) + 1;
+
+       }
+            return n;
     }
 }
