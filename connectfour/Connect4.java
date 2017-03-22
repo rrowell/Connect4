@@ -16,7 +16,7 @@ public class Connect4
         player player1 = new player("o", false);
         wantAI();
         player player2 = new player("x", AI);
-        
+        gameboard.startgame();
         while(gameboard.check() == false){
              Scanner sc = new Scanner(System.in);
              System.out.println("Enter which column you want to drop (1-7)");
