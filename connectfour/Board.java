@@ -32,7 +32,7 @@ public class Board
     }
     public boolean checkDown(int row, int col){
         //checks for a win down if conditions apply
-        if (row > 3 || board[row][col].equals(" ")){
+        if (row > 2 || board[row][col].equals(" ")){
             return false;
        }
        else if (board[row][col].equals(board[row+1][col])&&board[row][col].equals(board[row+2][col]) &&board[row][col].equals(board[row+3][col])){
@@ -44,7 +44,7 @@ public class Board
     }
     public boolean checkRight(int row, int col){
         //check for a win right if the conditions apply
-        if (col > 4 || board[row][col].equals(" ")){
+        if (col > 3 || board[row][col].equals(" ")){
             return false;
        }
        else if (board[row][col].equals(board[row][col+1])&&board[row][col].equals(board[row][col+2])&&board[row][col].equals(board[row][col+3])){
@@ -56,7 +56,7 @@ public class Board
     }
     public boolean checkRD(int row, int col){
         //checks for a win right diagonal if conditions apply
-          if (col > 4 && row  >3 || board[row][col].equals(" ")){
+           if (col > 3 || row  >2 || board[row][col].equals(" ")){
             return false;
        }
        else if (board[row][col].equals(board[row+1][col+1])&&board[row][col].equals(board[row+2][col+2])&&board[row][col].equals(board[row+3][col+3])){
@@ -68,7 +68,7 @@ public class Board
     }
     public boolean checkLD(int row, int col){
         //checks for a win left diagonal if conditions apply
-            if (col < 3 && row  >3 || board[row][col].equals(" ")){
+            if (col < 3 || row  >2 || board[row][col].equals(" ")){
             return false;
        }
        else if (board[row][col].equals(board[row+1][col-1])&&board[row][col].equals(board[row+2][col-2])&&board[row][col].equals(board[row+3][col-3])){
@@ -81,7 +81,7 @@ public class Board
 
     public boolean drop(int col, String car){
         int space = 0;
-        while(board[space][col-1].equals(" ")){
+        while(space < board.length && board[space][col-1].equals(" ") ){
             space++;
         }
         

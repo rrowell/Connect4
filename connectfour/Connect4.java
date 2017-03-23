@@ -15,7 +15,9 @@ public class Connect4
         Board gameboard = new Board();
         player player1 = new player("o", false);
         wantAI();
+        System.out.print("yo");
         player player2 = new player("x", AI);
+        gameboard.printer();
         gameboard.startgame();
         while(gameboard.check() == false){
              Scanner sc = new Scanner(System.in);
