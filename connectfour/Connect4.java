@@ -15,7 +15,6 @@ public class Connect4
         Board gameboard = new Board();
         player player1 = new player("o", false);
         wantAI();
-        System.out.print("yo");
         player player2 = new player("x", AI);
         gameboard.printer();
         gameboard.startgame();
@@ -34,9 +33,13 @@ public class Connect4
                  Scanner bc = new Scanner(System.in);
                  System.out.println("Enter which column you want to drop (1-7)");
                  col = bc.nextInt();
+                 
                  gameboard.drop(col, player2.symbol);
+                
+           
             }
             if (AI == true){
+                System.out.println("Computer's Turn");
                 gameboard.drop(player2.dropAI(), player2.symbol);
             }
             gameboard.printer();
@@ -54,11 +57,11 @@ public class Connect4
         System.out.println("Enter 1 for 1 player and 2 for 2 player");
         int numPlayers = sc.nextInt();
         if(numPlayers == 1){
-            AI = false;
+            AI = true;
         }
         else{
             if(numPlayers == 2) {
-                AI = true;
+                AI = false;
             }
             else{
                 System.out.println("Please enter a valid number");
