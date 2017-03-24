@@ -22,6 +22,11 @@ public class Connect4
              Scanner sc = new Scanner(System.in);
              System.out.println("Enter which column you want to drop (1-7)");
              int col = sc.nextInt();
+            
+             while(col > 7 || col < 1) {
+                      System.out.println("Enter which column you want to drop (1-7)");
+                      col = sc.nextInt();
+             }
              gameboard.drop(col, player1.symbol);
              gameboard.printer();
             if (gameboard.check()==true){
@@ -33,7 +38,10 @@ public class Connect4
                  Scanner bc = new Scanner(System.in);
                  System.out.println("Enter which column you want to drop (1-7)");
                  col = bc.nextInt();
-                 
+                 while(col > 7 || col < 1) {
+                      System.out.println("Enter which column you want to drop (1-7)");
+                      col = bc.nextInt();
+                    }
                  gameboard.drop(col, player2.symbol);
                 
            
