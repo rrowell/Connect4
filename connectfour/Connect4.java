@@ -19,7 +19,11 @@ public class Connect4
         gameboard.printer();
         gameboard.startgame();
         while(gameboard.check() == false){
-             Scanner sc = new Scanner(System.in);
+             if(gameboard.full()== true){
+                 winner = 0;
+                 break;
+                }
+            Scanner sc = new Scanner(System.in);
              System.out.println("Enter which column you want to drop (1-7)");
              int col = sc.nextInt();
             
@@ -56,8 +60,11 @@ public class Connect4
         if (winner == 1){
             System.out.println("Player 1 wins, congrats");
         }
-        else{
+        else if (winner == 2){
             System.out.println("Player 2 wins, congrats");
+        }
+        else if (winner == 0){
+            System.out.println("TIE YOU BOTH TAKING L's");
         }
     }
     public void wantAI(){

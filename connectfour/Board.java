@@ -103,4 +103,14 @@ public class Board
             System.out.println("");
         }
     }
+    public boolean full(){
+         for (int row = 0; row < board.length; row++){
+            for (int col = 0; col<7; col++){
+                if (board[row][col].equals(" ")){
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
 }
