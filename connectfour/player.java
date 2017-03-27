@@ -13,12 +13,13 @@ public class player
      public boolean AI;
      public int n ;
      
+     //player constructor with the symbol and AI boolean 
     public player(String sym, boolean yayornay) {
         symbol = sym;
         AI = yayornay;
         
     }
-   
+   //generates a random int from 1-7 for the AI player to use in the drop class
     public int dropAI() {
         if(AI = true){
         Random rand = new Random();

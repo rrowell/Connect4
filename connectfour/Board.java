@@ -7,10 +7,11 @@
  */
 public class Board
 {
-    // instance variables - replace the example below with your own
+    //creates a 2D array to create our board 
     public String[][] board = new String[6][7];
     public Board(){
     }
+    //creates a blank board to start the game 
     public void startgame(){
         //creates blank board
         for (int row = 0; row < board.length; row++){
@@ -20,7 +21,7 @@ public class Board
         }
     }
     public boolean check(){
-
+        //combines all the check methods to check the board to see if someone has won
         for (int row = 0; row<board.length; row++){
             for (int col = 0; col < 7; col++){
                 if(checkDown(row, col)|| checkRight(row, col)|| checkRD(row, col)||checkLD(row, col)){
@@ -80,11 +81,13 @@ public class Board
     }
 
     public boolean drop(int col, String car){
+        //drops an x or an o onto the board 
         int space = 0;
+        //finds the number of empty spaces to see how far down the board the char should drop 
         while(space < board.length && board[space][col-1].equals(" ") ){
             space++;
         }
-        
+        //checks to make sure there are any empty rows left to drop in 
         if (space > 0){
             space--;
             board[space][col-1] = car;
@@ -94,6 +97,7 @@ public class Board
             return false;
         }
     }
+    //prints the board to the console 
     public void printer(){
         
         for (int row = 0; row < board.length; row++){
@@ -104,6 +108,8 @@ public class Board
         }
     }
     public boolean full(){
+        //tie mechanism
+        //checks to see if there is an empty space somewhere on the board left
          for (int row = 0; row < board.length; row++){
             for (int col = 0; col<7; col++){
                 if (board[row][col].equals(" ")){
